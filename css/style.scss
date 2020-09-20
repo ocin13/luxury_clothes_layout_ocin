@@ -1,0 +1,358 @@
+$color-text:#ebe2d3;
+$color-button:#f7a919;
+body{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.row-content{
+    padding: 50px 0;
+}
+.mainButton{
+    margin-top: 25px;
+    cursor: pointer;
+    background-color: $color-button;
+    border: $color-button 1px solid;
+    color: white;
+}
+#mySidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100vh;
+    transition: all ease-out 300ms;
+        a{
+            color: black;
+            font-size: 1.6em;
+            transition: all ease-out 500ms;
+        }
+        
+       .menu{
+            a:nth-child(1), a:nth-child(3){
+                animation: animate-left 500ms ease-in-out 1;
+                
+            }
+            a:nth-child(2), a:nth-child(4){
+                animation:animate-right 500ms ease-in-out 1;
+                
+            }
+            a:hover{
+                font-weight: 600;
+                font-size: 1.7;
+                letter-spacing: 10px;
+            }
+       }
+        #close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            i{
+                font-size: 1.6em;
+            }
+        }
+        .menu{
+            padding-top: 100px;
+        }
+    }
+
+@keyframes animate-right{
+    0%{
+        transform: translateX(-20px);
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    95%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes animate-left{
+    0%{
+        transform: translateX(50px);
+    }
+    50%{
+        transform: translateX(25px);
+    }
+    95%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+#open{
+    font-size: 1.8em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    cursor: pointer;
+    color: black;
+    text-shadow:white 1px 1px  5px ;
+}
+.element-open{
+    display: block;
+    z-index: 99;
+}
+.element-close{
+    display: none;
+}
+.layout{
+    margin: 0;
+    padding: 0;
+}
+.bg-1{
+    margin: 0;
+    background-image: url(/img/balancing-1868051_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-weight: 700;
+    font-size: 2.2em;
+    font-family: Lobster, "cursive";
+}
+.bg-2{
+    background-color: $color-text;
+}
+.bg-3{
+    div{
+        p{
+            line-height: 35px;
+        }
+    }
+    div{
+        img{
+            width: 95%;
+            height: 400px;
+            
+        }
+    }
+}
+.bg-4{
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/21/20/51/tshirt-2428521_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   h1{
+       font-size: 2.6em;
+       text-shadow: black 2px 2px 8px;
+       transition: all ease-in-out 700ms;
+   }
+   h1:hover{
+       transform: scaleY(1.2);
+       letter-spacing: 10px;
+       cursor: pointer;
+   }
+}
+
+.bg-5{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h2{
+        font-family: Lobster,"cursive";
+    }
+    .cards{
+        border: none;
+        height: 320px;
+        overflow-y: hidden;
+        margin-bottom: 40px;
+        .wrap{
+            width: 86%;
+            height: 200px;
+            margin: 0 25px;
+            padding: 0;
+            position: relative;
+            .cover-img{
+                position: absolute;
+                z-index: -99;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 200px;
+                width: 100%;
+                background-image: linear-gradient(to right,rgba(#ff30d9,0.5),rgba(#ff8330,0.5),rgba(#f7fa67,0.5));
+            }
+            img{
+                height: 200px;
+                width: 100%;
+                position: relative;
+                z-index: -999;
+            }
+        }
+        
+    }
+    .card-body{
+        margin-top: -70px;
+        transition: all ease-in-out 800ms;
+        .avatar{
+            position: relative;
+            z-index: 0;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition: all ease-in-out 800ms;
+            transform-style: preserve-3d;
+        }
+        .description{
+            margin: 0 40px;
+        }
+ }
+}
+.cards:hover .card-body{
+    transform: translateY(-120px);
+}
+.cards:hover .avatar{
+    transform: translateX(100px) scale(1.3) perspective(800px) translateZ(50px) rotateX(-20deg)  rotateY(-25deg);
+    
+}
+.cards:hover h4{
+    text-align: left;
+    margin-left: 10px;
+    transform: translateY(-70px);
+    line-height: 30px;
+    font-size: 1.9em;
+    color: white;
+    text-shadow: black 2px 2px 8px;
+}
+.cards:hover .job{
+    text-align: left;
+    margin-left: 10px;
+    transform: translateY(-70px);
+    line-height: 30px;
+    color: white;
+    text-shadow: black 2px 2px 8px;
+}
+@media only screen and (max-width: 300px) {
+    .cards:hover .avatar{
+        transform: translateX(100px) scale(0.5) translateY(-10px) perspective(800px) translateZ(50px) rotateX(-20deg)  rotateY(-25deg);
+        
+    }
+}
+@media only screen and (max-width: 480px) {
+    .cards:hover .avatar{
+        transform: translateX(100px) scale(0.8) translateY(-10px) perspective(800px) translateZ(50px) rotateX(-20deg)  rotateY(-25deg);
+        
+    }
+}
+.bg-6{
+    img{
+        height: 200px;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 10px 0;
+    }
+    #showMore{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-button;
+        border: $color-button 1px solid;
+    }
+    div{
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li{
+                float: right;
+                a{
+                    text-decoration: none;
+                    display: block;
+                    padding: 14px 16px;
+                    margin: 0 20px;
+                    color: black;
+                    font-weight: 600;
+                    transition: all ease-in-out 600ms;
+                }
+                a:hover{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+.go-top{
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    height: 45px;
+    width: 45px;
+    color: white;
+    background-color: rgba(175, 174, 174,0.3);
+    border-radius: 50%;
+    font-size: 1.6em;
+    text-align: center;
+    margin: 20px 10px;
+}
+.go-top:hover{
+    background-color: black;
+    color: white;
+}
+.up-active{
+    background-color: black;
+}
+.bg-7{
+    margin: 0;
+    .footer-cover{
+        width: 100%;
+        height: 70vh;
+        background-image: url(https://cdn.pixabay.com/photo/2016/11/19/20/17/catwalk-1840941_1280.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(3px);
+        position: absolute;
+    }
+    div {
+        p{
+            color: white;
+            font-size: 1.1em;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-top: 25px;
+            text-shadow: black 2px 2px 8px;
+            font-weight: 600;
+        }
+    }
+    form{
+        color: white;
+        .text-box{
+            background-color: rgba($color: #000000, $alpha: 0);
+            border-radius: 0;
+            border: white 2px solid;
+            color: white;
+            box-shadow: black 2px 2px 8px;
+            margin-bottom: 15px;
+        }
+        button:nth-child(1){
+            background-color: $color-button;
+            border: $color-button 1px solid;
+        }
+    }
+    
+}
