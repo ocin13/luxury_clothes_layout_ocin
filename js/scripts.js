@@ -35,4 +35,14 @@ $(document).ready(function(){
     $(window).scroll(function(){
         $(".go-top").toggleClass("up-active")
     });
+    //btn show more
+    $("#showMore").click(function(){
+        if($("#showMore").hasClass("less")){
+            $("#showMore").html("Show More");
+            $("#showMore").removeClass("less");
+        }else{
+            $("#showMore").html("Show Less");
+            $("#showMore").addClass("less");
+        }
+    });
 });
